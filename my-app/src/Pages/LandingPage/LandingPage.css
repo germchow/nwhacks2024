@@ -1,0 +1,44 @@
+.help{
+    color: #E86A33;
+    font-family: Arial;
+    font-size: 125px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94.8%; /* 118.5px */
+    letter-spacing: -4.375px;
+}
+
+.reducewaste{
+    color: #2F2F2F;
+    font-family: Arial;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94.8%; /* 49.296px */
+}
+
+.title{
+    display: flex;  
+    gap: 2rem;
+}
+
+.outercontainer{
+    display: flex;
+    border: 1px red solid;
+
+    margin-top: 10%;
+}
+
+.leftcontainer{
+    display: flex;
+    align-items: center;
+    border: 1px green solid;
+    margin-left: 10%;
+}
+
+
+.pic{
+    max-width: 100%;
+    min-height: 150%;
+    border: 1px blue solid;
+}

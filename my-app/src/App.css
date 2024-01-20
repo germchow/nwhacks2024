@@ -9,4 +9,14 @@
     justify-content: center;
     margin: 20px auto;
     border-radius: 30px;
-  }
+}
+
+.appContainer{
+  background-color: rgb(65, 100, 74);
+  height: 100vh;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+ }
