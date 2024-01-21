@@ -48,9 +48,20 @@ function SwipingInterface() {
   const [lastDirection, setLastDirection] = useState()
   const [curIndex, setCurIndex] = useState(0)
   const [swipeRight, setSwipeRight] = useState(false)
+
+  const [name, setName] = useState("")
+  const [distance, setDistance] = useState(0)
+  const [address, setAddress] = useState("")
+  const [rating, setRating] = useState(0)
+  const [produceType, setProduceType] = useState("")
+  const [weight, setWeight] = useState(0)
+  const [timeSincePost, setTimeSincePost] = useState(0)
+  const [url, setUrl] = useState("")
   
   useEffect(() => {
     if (lastDirection == 'right') {
+      
+      console.log(name, distance, address, rating, produceType, weight, timeSincePost, url)
       setSwipeRight(true)
     }
     else {
@@ -59,18 +70,44 @@ function SwipingInterface() {
   },[lastDirection])
 
 
-  const swiped = (direction, nameToDelete) => {
+  const swiped = (direction, nameToDelete,address,rating,produceType,weight, timeSincePost,url) => {
     console.log('removing: ' + nameToDelete)
     setCurIndex(curIndex + 1)
+
     setLastDirection(direction)
+    
+    // Every swipe add all the information
+    setName(nameToDelete)
+    setAddress(address)
+    setRating(rating)
+    setProduceType(produceType)
+    setWeight(weight)
+    setTimeSincePost(timeSincePost)
+    setUrl(url)
   }
 
   const outOfFrame = (name) => {
-    console.log(name + ' left the screen!')
+    //console.log(name + ' left the screen!')
   }
 
   var cardMap = cards.map((card) =>
-        <TinderCard className='swipe' key={card.name} onSwipe={(dir) => swiped(dir, card.name)} onCardLeftScreen={() => outOfFrame(card.name)}>
+        <TinderCard 
+          className='swipe' 
+          key={card.name} 
+          onSwipe={(dir) => 
+            swiped(
+              dir, 
+              card.name, 
+              card.distance, 
+              card.address, 
+              card.rating, 
+              card.produceType, 
+              card.weight, 
+              card.timeSincePost, 
+              card.url
+            )} 
+          onCardLeftScreen={() => outOfFrame(card.name)}
+        >
             <Card
                 name={card.name}
                 distance={card.distance}
@@ -91,7 +128,18 @@ function SwipingInterface() {
       </div>
       {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
         
-      {swipeRight ? <Popup selected={true} /> : <Popup selected={false} />} 
+      {swipeRight ? 
+        <Popup 
+          selected={true} 
+          name={name}
+          address={address}
+          rating={rating}
+          produceType={produceType}
+          weight={weight}
+          timeSincePost={timeSincePost}
+          url={url}
+        /> 
+        : <Popup selected={false} />} 
     </div>
 
   )

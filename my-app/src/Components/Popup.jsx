@@ -1,13 +1,30 @@
 import React from "react";
 import './Popup.css';
 
-const Popup = ({selected}) => {
+const Popup = (
+    {
+        selected, 
+        name,
+        address,
+        rating,
+        produceType,
+        weight,
+        timeSincePost,
+        url
+    
+    }) => {
     return (
         <>
         { selected ? (
             <>
                 <div className="outercontainerPopup">
-                    asdfuawefhaewf
+                    {name}
+                    {address}
+                    {rating}
+                    {produceType}
+                    {weight}
+                    {timeSincePost}
+                    {url}
                 </div>
             </>
         ) : null
