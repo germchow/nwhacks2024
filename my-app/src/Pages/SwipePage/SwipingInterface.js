@@ -7,18 +7,27 @@ const db = [
     {
         name: "Green Acres",
         address: "123 Farm Road, Anytown, BC, Canada",
-        url:'./fruit.png',
+        rating: 4.9,
+        produceType: "potato",
+        weight: 20,
+        url:'./potatoes.png',
 
     },
     {
         name: "Farmland 21",
         address: "201 Farm District, BC, Canada",
-        url:'./fruit.png',
+        rating: 4.0,
+        produceType: "onion",
+        weight: 8,
+        url:'./onions.png',
     },
     {
         name: "Farmers Market",
         address: "Somewhere",
-        url:'./fruit.png',
+        rating: 3.6,
+        produceType: "carrot",
+        weight: 12,
+        url:'./carrots.png',
     },
 ]
 
@@ -64,7 +73,7 @@ function SwipingInterface() {
         {characters.map((character) =>
           <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
             <div className='card'>
-              <img className="producePicture" src="./fruit.png"></img>
+              <img className="producePicture" src={character.url}></img>
               <h3>{character.name}</h3>
             </div>
           </TinderCard>
