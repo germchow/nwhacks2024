@@ -1,14 +1,33 @@
 import './App.css';
-import SwipePage from './Pages/SwipePage/SwipePage';
-import './styles.css';
+import LandingPage from './Pages/LandingPage/LandingPage.js';
+import FarmerPage from './Pages/FarmerPage/FarmerPage.jsx';
+import MatchPage from './Pages/MatchPage/MatchPage.js';
+import SwipePage from './Pages/SwipePage/SwipePage.js';
+import NavBar from './Components/NavBar';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route
+} from "react-router-dom"
+import LoginPage from './Pages/LoginPage/LoginPage';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <h1>My React App</h1>
-      <SwipePage />
-    </div>
-  );
+
+    <>
+      <NavBar/>
+      <Routes>
+        <Route path="/farmerpage" element={<FarmerPage/>}/>
+        <Route path="/landingpage" element={<LandingPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/matchpage" element={<MatchPage/>}/>
+        <Route path="/swipepage" element={<SwipePage/>}/>
+      </Routes>  
+    </>
+  )
 }
 
 export default App;
