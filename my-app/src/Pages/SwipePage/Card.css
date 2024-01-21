@@ -1,0 +1,26 @@
+.cardDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cardTop{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardName{
+    font-size: 1.2rem;
+}
+
+.cardWeight{
+    font-size: 1rem;
+}
+
+.rightsideCard{
+    font-size: 1rem;
+}
+
+.timePostedCard{
+    margin-left: 1rem;
+}

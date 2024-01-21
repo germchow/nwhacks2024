@@ -8,12 +8,18 @@ import {
   createBrowserRouter,
   RouterProvider,
   Routes,
-  Route
+  Route,
+  Link
 } from "react-router-dom"
 import LoginPage from './Pages/LoginPage/LoginPage';
+import { useEffect } from 'react';
+
 
 function App() {
 
+  useEffect(() => {
+    document.title = "FarmShare"
+  },[])
 
   return (
     <>

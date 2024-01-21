@@ -8,11 +8,15 @@ const NavBar = () => {
       <nav>
         <ul>
           <li className="navbar">
-            <Link to="/landingpage" className="link">Landing Page</Link>
-            <Link to="/farmerpage" className="link">Farmer Page</Link>
-            <Link to="/matchpage" className="link">Match Page</Link>
-            <Link to="/loginpage" className="link">Login Page</Link>
-            <Link to ="/swipepage" className="link">Swipe Page</Link>
+            <div className="leftNavBar">
+                <img className="logoNavBar" src="./uglyBroccoli.png"></img>
+                <div className="nameNavBar">FarmShare</div>
+            </div>
+            <div className="rightNavBar">
+              <Link to="/landingpage" className="link">Home</Link>
+              <Link to="/farmerpage" className="link">Farmer</Link>
+              <Link to ="/swipepage" className="link">Swipe</Link>
+              </div>
           </li>
         </ul>
       </nav>
