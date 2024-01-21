@@ -35,8 +35,19 @@
     background: linear-gradient(rgba(134, 168, 112, 1), rgb(65, 100, 74));
     border-radius: 20px;
     border: solid white 4px;
-    /* transform: rotate(20deg); */
+    animation: MoveUpDown 1s linear infinite;
+    position: relative;
+
 }
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 20px;
+    }
+  }
 
 .matchCardImage {
     height: 100px;
@@ -62,6 +73,6 @@
 }
 
 .matchMessage {
-    padding-top: 60px;
+    padding-top: 40px;
     font-size: 46px;
 }

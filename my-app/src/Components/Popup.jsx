@@ -35,7 +35,7 @@ const Popup = (
                     </div>
                     </div>
                     <div className="matchMessage">
-                    <p>Good Secured</p>
+                    <p>Goods Secured!</p>
                     </div>
                     
                     
