@@ -84,3 +84,9 @@
     gap: 4rem;
 }
 
+#quantity{
+    min-height: 3rem;
+    font-family: Arial;
+    font-size: 40px;
+}
+
