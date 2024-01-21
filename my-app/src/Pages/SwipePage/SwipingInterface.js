@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import TinderCard from 'react-tinder-card'
 import './SwipePage.css'
 import Popup from '../../Components/Popup'
+import Card from './Card'
 
 const db = [
     {
@@ -62,28 +63,27 @@ function SwipingInterface() {
     console.log(name + ' left the screen!')
   }
 
+  var cardMap = cards.map((card) =>
+        <TinderCard className='swipe' key={card.name} onSwipe={(dir) => swiped(dir, card.name)} onCardLeftScreen={() => outOfFrame(card.name)}>
+            <Card
+                name={card.name}
+                address={card.address}
+                rating={card.rating}
+                produceType={card.produceType}
+                weight={card.weight}
+                url={card.url}
+            />
+        </TinderCard>)
+  
 
   return (
     <div>
       <div className='cardContainer'>
-        {cards.map((card) =>
-          <TinderCard className='swipe' key={card.name} onSwipe={(dir) => swiped(dir, card.name)} onCardLeftScreen={() => outOfFrame(card.name)}>
-            <div className='card'>
-              <img className="producePicture" src={card.url}></img>
-              <div className='cardDescription'>
-                <h3>{card.name}</h3>
-                <p>{card.rating} / 5.0</p>
-                <p>{card.produceType}</p>
-                <p>{card.weight} lbs bag</p>
-              </div>  
-              
-            </div>
-          </TinderCard>
-        )}
+        {cardMap}
       </div>
       {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
         
-      {swipeRight ? <Popup selected={true}/> : <Popup selected={false}/>} 
+      {swipeRight ? <Popup selected={true} /> : <Popup selected={false} />} 
     </div>
 
   )
