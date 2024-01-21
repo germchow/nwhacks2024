@@ -3,8 +3,10 @@ import SwipingInterface from './SwipingInterface'
 
 function SwipePage() {
     return (
-        <div>
+        <div className='swipePage'>
+            <img className='arrow' src='./leftArrow.png'/>
             <SwipingInterface />
+            <img className='arrow' src='./rightArrow.png'/>
         </div>
 
     )
