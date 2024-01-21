@@ -8,11 +8,11 @@ const NavBar = () => {
       <nav>
         <ul>
           <li className="navbar">
-            <Link to="/landingpage">Landing Page</Link>
-            <Link to="/farmerpage">Farmer Page</Link>
-            <Link to="/matchpage">Match Page</Link>
-            <Link to="/loginpage">Login Page</Link>
-            <Link to ="/swipepage">Swipe Page</Link>
+            <Link to="/landingpage" className="link">Landing Page</Link>
+            <Link to="/farmerpage" className="link">Farmer Page</Link>
+            <Link to="/matchpage" className="link">Match Page</Link>
+            <Link to="/loginpage" className="link">Login Page</Link>
+            <Link to ="/swipepage" className="link">Swipe Page</Link>
           </li>
         </ul>
       </nav>
