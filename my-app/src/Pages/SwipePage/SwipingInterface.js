@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TinderCard from 'react-tinder-card'
 import './SwipePage.css'
+import Popup from '../../Components/Popup'
 
 const db = [
     {
@@ -19,12 +20,24 @@ const db = [
         address: "Somewhere",
         url:'./fruit.png',
     },
-  ]
+]
+
+
 
 function SwipingInterface() {
+  
+  
+  {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
   const characters = db
   const [lastDirection, setLastDirection] = useState()
   const [curIndex, setCurIndex] = useState(0)
+  
+  useEffect(() => {
+    if (lastDirection == 'right') {
+      {/*Call the popup*/}
+    }
+  },[lastDirection])
+
 
   const swiped = (direction, nameToDelete) => {
     console.log('removing: ' + nameToDelete)
