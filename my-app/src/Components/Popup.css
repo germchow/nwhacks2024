@@ -1,0 +1,16 @@
+.outercontainer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 50;
+    position: fixed;
+    inset: 0;
+
+    max-width: 30%;
+    max-height: 30%;
+    background-color: black;
+}
+

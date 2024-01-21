@@ -1,11 +1,17 @@
 import React from "react";
+import './Popup.css';
 
-const Popup = ({ selected, closePopup }) => {
+const Popup = ({selected}) => {
     return (
         <>
-            <div className="">
-                test
-            </div>
+        { selected ? (
+            <>
+                <div className="outercontainer">
+                    asdfuawefhaewf
+                </div>
+            </>
+        ) : null
+        }
         </>
     )
 }

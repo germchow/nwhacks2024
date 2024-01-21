@@ -31,10 +31,14 @@ function SwipingInterface() {
   const characters = db
   const [lastDirection, setLastDirection] = useState()
   const [curIndex, setCurIndex] = useState(0)
+  const [swipeRight, setSwipeRight] = useState(false)
   
   useEffect(() => {
     if (lastDirection == 'right') {
-      {/*Call the popup*/}
+      setSwipeRight(true)
+    }
+    else {
+      setSwipeRight(false)
     }
   },[lastDirection])
 
@@ -67,7 +71,10 @@ function SwipingInterface() {
         )}
       </div>
       {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
+        
+      {swipeRight ? <Popup selected={true}/> : <Popup selected={false}/>} 
     </div>
+
   )
 }
 
