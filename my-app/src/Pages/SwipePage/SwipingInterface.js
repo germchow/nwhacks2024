@@ -5,18 +5,18 @@ const db = [
     {
         name: "Green Acres",
         address: "123 Farm Road, Anytown, BC, Canada",
-        imgUrl: "",
+        url:'./fruit.png',
 
     },
     {
         name: "Farmland 21",
         address: "201 Farm District, BC, Canada",
-        imgUrl: "",
+        url:'./fruit.png',
     },
     {
         name: "Farmers Market",
         address: "Somewhere",
-        imgUrl: "",
+        url:'./fruit.png',
     },
   ]
 
@@ -35,13 +35,18 @@ function SwipingInterface() {
     console.log(name + ' left the screen!')
   }
 
+//   var img1 = new Image();
+//   img1.src = "../assets/carrots.jpg";
+  console.log('url(\'' + characters[0].url + '\')')
+
   return (
     <div>
       <h1>Swipe Below</h1>
       <div className='cardContainer'>
         {characters.map((character) =>
           <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
-            <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
+            <div className='card'>
+              <img src="./fruit.png"></img>
               <h3>{character.name}</h3>
             </div>
           </TinderCard>

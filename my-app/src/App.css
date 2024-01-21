@@ -7,13 +7,12 @@
     width: 300px;
     height: 400px;
     border: 1px solid #ccc;
-    background-color: #a5b597;
+    /* background-color: #a5b597; */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px auto;
     border-radius: 30px;
-
   }
 
 
