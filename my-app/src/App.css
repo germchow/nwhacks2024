@@ -1,4 +1,8 @@
 /* styles.css */
+.swipe {
+  position: absolute;
+}
+
 .card {
     width: 300px;
     height: 400px;
@@ -9,4 +13,5 @@
     justify-content: center;
     margin: 20px auto;
     border-radius: 30px;
+
   }
