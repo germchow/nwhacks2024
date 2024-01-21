@@ -1,0 +1,86 @@
+.page-header{ color: #E86A33; 
+    font-family: Arial; 
+    font-size: 35px; 
+    font-style: normal; 
+    font-weight: 700; 
+    line-height: 550%; 
+    letter-spacing: -1.375px; 
+    margin-left: 14.4%; 
+}
+
+
+.page-container{
+    width: 100%; 
+    height: 100vh;
+}
+
+.rounded-box{
+    width: 100%; 
+    height: 60%; 
+    max-width: 1210px; 
+    margin: auto; 
+    border-radius: 100px;
+    background: linear-gradient(0deg, #99B080 0%, #99B080 100%), #263a2933;
+    color: #E86A33; 
+    font-family: Arial; 
+    font-weight: 700; 
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-picture {
+    width: 20%;
+    height: 20%;
+    flex-shrink: 1;
+    padding-top: 7%; 
+    padding-left: 15%;
+}
+
+.options{
+    font-family: Arial; 
+    font-size: 25px; 
+    font-weight: 70; 
+    color: #005e22; 
+    margin-right: 0%;
+    padding-left: 2%; 
+
+}
+
+.produce-label{
+    font-size: 40px; 
+}
+
+
+.produce-options {
+    display: flex; 
+}
+
+.quanity{
+    font-size: 39px; 
+}
+
+.quanity1{
+    font-size: 39px; 
+    padding-left: 1%; 
+}
+
+.button{
+    font-size: 40px; 
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 700; 
+    font-family: Arial; 
+    border: 0px solid #263a2933;
+    background-color: #ffffff; 
+    color: #41644A;
+    max-width: 50%;
+}
+
+.rightContainerFarmer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+
