@@ -1,6 +1,6 @@
 .outercontainer{
     display: flex;
-    margin-left: 10%;
+    margin-left: 6%;
 }
 
 .help{
@@ -78,5 +78,6 @@
     padding-top: 15%;
 }
 
-.rightcontainer{
+.swipe{
+    text-decoration: none;
 }
