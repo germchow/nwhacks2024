@@ -6,7 +6,7 @@ const Popup = ({selected}) => {
         <>
         { selected ? (
             <>
-                <div className="outercontainer">
+                <div className="outercontainerPopup">
                     asdfuawefhaewf
                 </div>
             </>
