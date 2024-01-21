@@ -19,7 +19,7 @@ const LandingPage = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus leo, varius in urna sodales, ultricies accumsan est. Proin euismod aliquet urna, vel sodales mauris mollis vel.
                 </div>
                 <div className="btns">
-                    <Link to="/swipepage" className="swipe">Start Swiping</Link>
+                    <Link to="/swipepage" className="swipeBTN">Start Swiping</Link>
                 </div>
             </div>
             

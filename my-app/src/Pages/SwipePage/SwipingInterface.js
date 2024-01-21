@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TinderCard from 'react-tinder-card'
+import './SwipePage.css'
 
 const db = [
     {
@@ -46,7 +47,7 @@ function SwipingInterface() {
         {characters.map((character) =>
           <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
             <div className='card'>
-              <img src="./fruit.png"></img>
+              <img className="producePicture" src="./fruit.png"></img>
               <h3>{character.name}</h3>
             </div>
           </TinderCard>
