@@ -84,3 +84,16 @@
     gap: 4rem;
 }
 
+#quantity{
+    min-height: 3rem;
+    font-family: Arial;
+    font-size: 40px;
+    max-width: 50%;
+}
+
+.toprightContainerFarmer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
