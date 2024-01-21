@@ -47,8 +47,8 @@ const FarmerPage = ({cards, cardsSetter}) => {
                 address: "New Address",
                 distance: 0.0,
                 rating: 0.0,
-                produceType: "New Produce",
-                weight: 0.0,
+                produceType: selectedProduce.label,
+                weight: quantity,
                 timeSincePost: 0.0,
                 produceUrl:'./potatoes.png',
               }
