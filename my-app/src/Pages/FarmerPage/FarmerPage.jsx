@@ -25,6 +25,8 @@ const FarmerPage = ({cards, cardsSetter}) => {
 
     const [selectedProduce, setSelectedProduce] = useState(null);
     const [quantity, setQuantity] = useState("");
+    const [address, setAddress] = useState("")
+    const [farmName, setFarmName] = useState("")
 
     const handleProduceChange = (selectedOption) => {
         setSelectedProduce(selectedOption);
@@ -33,7 +35,15 @@ const FarmerPage = ({cards, cardsSetter}) => {
     const handleQuantityChange = (event) => {
         setQuantity(event.target.value);
       };
+    
+    const handleAddressChange = (event) => {
+      setAddress(event.target.value);
+    };
 
+    const handleFarmNameChange = (event) => {
+      setFarmName(event.target.value);
+    };
+    
     const handleSubmit = () => {
         if (selectedProduce && quantity !== "") {
           console.log("Selected Produce:", selectedProduce.label);
@@ -43,12 +53,12 @@ const FarmerPage = ({cards, cardsSetter}) => {
             [
               ...cards,
               {
-                name: "New Farm",
-                address: "New Address",
+                name: farmName,
+                address: address,
                 distance: 0.0,
                 rating: 0.0,
-                produceType: "New Produce",
-                weight: 0.0,
+                produceType: selectedProduce.label,
+                weight: quantity,
                 timeSincePost: 0.0,
                 produceUrl:'./potatoes.png',
               }
@@ -58,6 +68,8 @@ const FarmerPage = ({cards, cardsSetter}) => {
           // Reset the form
           setSelectedProduce(null);
           setQuantity("");
+          setAddress("");
+          setFarmName("");
         } else {
           console.log("Please select produce and enter quantity.");
         }
@@ -102,7 +114,9 @@ const FarmerPage = ({cards, cardsSetter}) => {
                             <label className='farm_name_label'>Farm Name: </label>
                             <input 
                                 type="text" 
-                                id="farm_name" 
+                                id="farm_name"
+                                value={farmName}
+                                onChange={handleFarmNameChange}  
                                 placeholder="Enter farm name" 
                                 />
                         </div>
@@ -112,6 +126,8 @@ const FarmerPage = ({cards, cardsSetter}) => {
                             <input 
                                 type="text" 
                                 id="address_name" 
+                                value={address}
+                                onChange={handleAddressChange} 
                                 placeholder="Enter address" 
                                 />
                         </div>
