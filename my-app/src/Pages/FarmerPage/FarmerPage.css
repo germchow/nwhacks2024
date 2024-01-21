@@ -1,4 +1,4 @@
-.page-header{ color: #E86A33; 
+page-header{ color: #E86A33; 
     font-family: Arial; 
     font-size: 35px; 
     font-style: normal; 
@@ -84,7 +84,9 @@
     gap: 4rem;
 }
 
-#quantity{
+#quantity,
+#farm_name,
+#address_name{
     min-height: 3rem;
     font-family: Arial;
     font-size: 40px;
@@ -97,3 +99,14 @@
     gap: 2rem;
 }
 
+.farm_name,
+.address_name{
+    font-size: 39px; 
+    padding-left: 1%; 
+}
+
+.uglyProduce{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 8rem;
+}

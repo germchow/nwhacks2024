@@ -47,8 +47,8 @@ const FarmerPage = ({cards, cardsSetter}) => {
                 address: "New Address",
                 distance: 0.0,
                 rating: 0.0,
-                produceType: selectedProduce.label,
-                weight: quantity,
+                produceType: "New Produce",
+                weight: 0.0,
                 timeSincePost: 0.0,
                 produceUrl:'./potatoes.png',
               }
@@ -69,7 +69,7 @@ const FarmerPage = ({cards, cardsSetter}) => {
     return (
         <div className="page-container">
             <header className="page-header">
-                 <h1>Post your ugly produce</h1>
+                 <h1 className='uglyProduce'>Post your ugly produce</h1>
             </header>
             <div className="rounded-box">
                 <img className="profile-picture" src="./HPCLogo.png" alt="HPC farm logo"></img>
@@ -96,6 +96,24 @@ const FarmerPage = ({cards, cardsSetter}) => {
                                 placeholder="Enter quantity" 
                                 />
                             <span className='quanity1'>lbs</span>
+                        </div>
+
+                        <div className="farm_name">
+                            <label className='farm_name_label'>Farm Name: </label>
+                            <input 
+                                type="text" 
+                                id="farm_name" 
+                                placeholder="Enter farm name" 
+                                />
+                        </div>
+
+                        <div className="address_name">
+                            <label className='address_name_label'>Address: </label>
+                            <input 
+                                type="text" 
+                                id="address_name" 
+                                placeholder="Enter address" 
+                                />
                         </div>
                     </div>
 
