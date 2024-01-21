@@ -16,7 +16,17 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus leo, varius in urna sodales, ultricies accumsan est. Proin euismod aliquet urna, vel sodales mauris mollis vel.
+            
+                    <p className='blurb'>
+                        The world generates approximately <strong>2.5 billion tons</strong> of food waste each year, with a significant 
+                        portion discarded by farmers simply because the produce is deemed <strong>'ugly.' </strong>
+                        Perfectly safe and delicious fruits and vegetables with unconventional shapes or sizes are overlooked by big 
+                        retailers who prefer uniformity on their shelves. 
+                        <br/>
+                        <br/>
+                        Our mission is to break this cycle of waste by providing a platform 
+                        that connects farmers with their communities, allowing them to share fresh produce for <strong>free</strong>. 
+                    </p>
                 </div>
                 <div className="btns">
                     <Link to="/swipepage" className="swipeBTN">Start Swiping</Link>
@@ -25,7 +35,7 @@ const LandingPage = () => {
             
             <div className='rightcontainer'>
                 <div >
-                        <img src="./fruit.png" className="pic"/>
+                        <img src="./uglyProduce.gif" className="pic"/>
                     </div>
             </div>
         </div>

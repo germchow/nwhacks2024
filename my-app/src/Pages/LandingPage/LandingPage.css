@@ -31,14 +31,24 @@
 }
 
 .description{
-    margin-top: 1rem;
-    width: 568px;
-    color: black;
-    font-family: Arial;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 138.8%; /* 30.536px */
+     height: 60%; 
+     max-width: 1210px; 
+     margin: auto; 
+     border-radius: 100px;
+     background: linear-gradient(0deg, #99B080 0%, #99B080 100%), #263a2933;
+     color: #E86A33; 
+     font-family: Arial; 
+     font-weight: 700; 
+     display: flex;
+     justify-content: space-around;
+     margin-top: 1rem;
+     width: 100000px;
+     color: black;
+     font-family: Arial;
+     font-size: 30px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 138.8%; /* 30.536px */
 }
 
 .leftcontainer{
@@ -50,6 +60,7 @@
 }
 
 .swipeBTN{
+    font-weight: 400;
     color: #F4ECE1;
     font-family: Arial;
     font-size: 20px;
@@ -73,9 +84,10 @@
 }
 
 .pic{
-    max-width: 90%;
-    max-height: 90%;
-    padding-top: 15%;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 45%;
+    margin-left: -10%;
 }
 
 .swipe{
@@ -85,3 +97,12 @@
 .swipeBTN{
     text-decoration: none;
 }
+
+.blurb{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    font-weight: 400;
+
+}
+
