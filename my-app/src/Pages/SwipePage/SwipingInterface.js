@@ -65,7 +65,6 @@ function SwipingInterface() {
 
   return (
     <div>
-      <h1>Swipe Below</h1>
       <div className='cardContainer'>
         {cards.map((card) =>
           <TinderCard className='swipe' key={card.name} onSwipe={(dir) => swiped(dir, card.name)} onCardLeftScreen={() => outOfFrame(card.name)}>
