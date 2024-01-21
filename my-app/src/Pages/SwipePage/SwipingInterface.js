@@ -70,7 +70,7 @@ function SwipingInterface() {
   },[lastDirection])
 
 
-  const swiped = (direction, nameToDelete,address,rating,produceType,weight, timeSincePost,url) => {
+  const swiped = (direction, nameToDelete,address,distance,rating,produceType,weight, timeSincePost,url) => {
     console.log('removing: ' + nameToDelete)
     setCurIndex(curIndex + 1)
 
@@ -79,6 +79,7 @@ function SwipingInterface() {
     // Every swipe add all the information
     setName(nameToDelete)
     setAddress(address)
+    setDistance(distance)
     setRating(rating)
     setProduceType(produceType)
     setWeight(weight)
@@ -98,8 +99,8 @@ function SwipingInterface() {
             swiped(
               dir, 
               card.name, 
-              card.distance, 
               card.address, 
+              card.distance, 
               card.rating, 
               card.produceType, 
               card.weight, 
@@ -110,8 +111,8 @@ function SwipingInterface() {
         >
             <Card
                 name={card.name}
-                distance={card.distance}
                 address={card.address}
+                distance={card.distance}
                 rating={card.rating}
                 produceType={card.produceType}
                 weight={card.weight}
@@ -133,6 +134,7 @@ function SwipingInterface() {
           selected={true} 
           name={name}
           address={address}
+          distance={distance}
           rating={rating}
           produceType={produceType}
           weight={weight}
