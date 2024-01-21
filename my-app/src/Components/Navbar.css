@@ -1,6 +1,6 @@
 .navbar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 2rem;
     gap: 10rem;
 }
@@ -8,9 +8,38 @@
 .link{
     text-decoration: none;
     color: #E86A33;
-font-family: Arial;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 94.8%; /* 30.336px */
+    font-family: Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94.8%; /* 30.336px */
+}
+
+.rightNavBar{
+    display: flex;
+    gap: 5rem;
+    margin-top: 1rem;
+}
+
+.logoNavBar{
+    max-width: 3rem;
+    max-width: 3rem;
+    border-radius: 2rem;
+}
+
+.nameNavBar{
+    text-decoration: none;
+    color: #E86A33;
+    font-family: Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.leftNavBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 3rem;
 }
