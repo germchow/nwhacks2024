@@ -11,7 +11,7 @@ const Popup = (
         produceType,
         weight,
         timeSincePost,
-        url
+        produceUrl
     
     }) => {
     return (
@@ -19,19 +19,25 @@ const Popup = (
         { selected ? (
             <>
                 <div className="outercontainerPopup">
+                    <div className="matchGraphic">
                     <div className="matchCard" style={{transform: 'rotate(-10deg)'}}>
                         <img className="matchCardImage" src={'./profile.png'}></img>
                         <div className="matchCardDescription">
                         <p>Anisha</p>
                         </div>
                     </div>
-                    <img className="matchProduceImage" src={url}></img>
+                    <img className="matchProduceImage" src={produceUrl}></img>
                     <div className="matchCard" style={{transform: 'rotate(10deg)'}}>
-                        <img className="matchCardImage" src={url}></img>
+                        <img className="matchCardImage" src={produceUrl}></img>
                         <div className="matchCardDescription">
-                        <p>{name}'s {produceType}</p>
+                        <p>{name}'s <b>{produceType}</b></p>
                         </div>
                     </div>
+                    </div>
+                    <div className="matchMessage">
+                    <p>Good Secured</p>
+                    </div>
+                    
                     
                 </div>
             </>

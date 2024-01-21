@@ -1,10 +1,10 @@
 import './Card.css'
 
-function Card({name, distance, address, rating, produceType, weight, timeSincePost, url}) {
+function Card({name, distance, address, rating, produceType, weight, timeSincePost, produceUrl}) {
 
     return (
     <div className='card'>
-        <img className="producePicture" src={url}></img>
+        <img className="producePicture" src={produceUrl}></img>
 
         <img className="heppell" src="./Heppell.png"></img>
 

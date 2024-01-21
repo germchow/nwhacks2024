@@ -17,6 +17,11 @@
     margin: auto auto;
 
     display: flex;
+    flex-flow: column;
+}
+
+.matchGraphic {
+    display: flex;
     flex-flow: row;
 }
 
@@ -56,3 +61,7 @@
     margin-right: -15px;
 }
 
+.matchMessage {
+    padding-top: 60px;
+    font-size: 46px;
+}

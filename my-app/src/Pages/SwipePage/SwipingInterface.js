@@ -13,7 +13,7 @@ const db = [
         produceType: "Potatoes",
         weight: 20,
         timeSincePost: 3.0,
-        url:'./potatoes.png',
+        produceUrl:'./potatoes.png',
     },
     {
         name: "Farmland 21",
@@ -23,7 +23,7 @@ const db = [
         produceType: "Onions",
         weight: 8,
         timeSincePost: 6.0,
-        url:'./onions.png',
+        produceUrl:'./onions.png',
     },
     {
         name: "Farmers Market",
@@ -33,7 +33,7 @@ const db = [
         produceType: "Carrots",
         weight: 12,
         timeSincePost: 1.0,
-        url:'./carrots.png',
+        produceUrl:'./carrots.png',
     },
     {
       name: "Sunrise Fields",
@@ -43,7 +43,7 @@ const db = [
       produceType: "Tomatoes",
       weight: 15,
       timeSincePost: 2.5,
-      url: './tomatoes.jpg',
+      produceUrl: './tomatoes.jpg',
   },
   {
       name: "Organic Harvest",
@@ -53,7 +53,7 @@ const db = [
       produceType: "Apples",
       weight: 10,
       timeSincePost: 4.2,
-      url: './apples.jpeg',
+      produceUrl: './apples.jpeg',
   },
   {
       name: "Golden Meadows",
@@ -63,7 +63,7 @@ const db = [
       produceType: "Broccoli",
       weight: 5,
       timeSincePost: 5.8,
-      url: './broccoli.jpg',
+      produceUrl: './broccoli.jpg',
   },
   {
     name: "Harvest Haven",
@@ -73,7 +73,7 @@ const db = [
     produceType: "Peaches",
     weight: 18,
     timeSincePost: 1.8,
-    url: './peaches.jpg',
+    produceUrl: './peaches.jpg',
 },
 {
     name: "Green Gardens",
@@ -83,7 +83,7 @@ const db = [
     produceType: "Cucumbers",
     weight: 7,
     timeSincePost: 3.5,
-    url: './cucumbers.jpg',
+    produceUrl: './cucumbers.jpg',
 },
 ]
 
@@ -105,12 +105,12 @@ function SwipingInterface() {
   const [produceType, setProduceType] = useState("")
   const [weight, setWeight] = useState(0)
   const [timeSincePost, setTimeSincePost] = useState(0)
-  const [url, setUrl] = useState("")
+  const [produceUrl, setProduceUrl] = useState("")
   
   useEffect(() => {
     if (lastDirection == 'right') {
       
-      console.log(name, distance, address, rating, produceType, weight, timeSincePost, url)
+      console.log(name, distance, address, rating, produceType, weight, timeSincePost, produceUrl)
       setSwipeRight(true)
     }
     else {
@@ -119,7 +119,7 @@ function SwipingInterface() {
   },[lastDirection])
 
 
-  const swiped = (direction, nameToDelete,address,distance,rating,produceType,weight, timeSincePost,url) => {
+  const swiped = (direction, nameToDelete,address,distance,rating,produceType,weight, timeSincePost,produceUrl) => {
     console.log('removing: ' + nameToDelete)
     setCurIndex(curIndex + 1)
 
@@ -133,7 +133,7 @@ function SwipingInterface() {
     setProduceType(produceType)
     setWeight(weight)
     setTimeSincePost(timeSincePost)
-    setUrl(url)
+    setProduceUrl(produceUrl)
   }
 
   const outOfFrame = (name) => {
@@ -154,7 +154,7 @@ function SwipingInterface() {
               card.produceType, 
               card.weight, 
               card.timeSincePost, 
-              card.url
+              card.produceUrl
             )} 
           onCardLeftScreen={() => outOfFrame(card.name)}
         >
@@ -166,7 +166,7 @@ function SwipingInterface() {
                 produceType={card.produceType}
                 weight={card.weight}
                 timeSincePost={card.timeSincePost}
-                url={card.url}
+                produceUrl={card.produceUrl}
             />
         </TinderCard>)
   
@@ -188,7 +188,7 @@ function SwipingInterface() {
           produceType={produceType}
           weight={weight}
           timeSincePost={timeSincePost}
-          url={url}
+          produceUrl={produceUrl}
         /> 
         : <Popup selected={false} />} 
     </div>
