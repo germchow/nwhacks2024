@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './FarmerPage.css';
 import Select from 'react-select'
 
-const FarmerPage = () => {
+const FarmerPage = ({cards, cardsSetter}) => {
 
     const options = [
         {value: "blueberries", label: "Blueberries" },
@@ -38,6 +38,22 @@ const FarmerPage = () => {
         if (selectedProduce && quantity !== "") {
           console.log("Selected Produce:", selectedProduce.label);
           console.log("Quantity:", quantity);
+
+          cardsSetter(
+            [
+              ...cards,
+              {
+                name: "New Farm",
+                address: "New Address",
+                distance: 0.0,
+                rating: 0.0,
+                produceType: "New Produce",
+                weight: 0.0,
+                timeSincePost: 0.0,
+                produceUrl:'./potatoes.png',
+              }
+            ]
+          )
     
           // Reset the form
           setSelectedProduce(null);

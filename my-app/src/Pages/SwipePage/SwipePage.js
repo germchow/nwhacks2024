@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
 import SwipingInterface from './SwipingInterface'
 
-function SwipePage() {
+function SwipePage({cards}) {
     return (
         <div className='swipePage'>
             <img className='arrow' src='./leftArrow.png'/>
-            <SwipingInterface />
+            <SwipingInterface cards={cards} />
             <img className='arrow' src='./rightArrow.png'/>
         </div>
 
